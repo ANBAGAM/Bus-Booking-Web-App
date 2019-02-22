@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>SignUp Page</title>
+</head>
+<body>
+	<form method=post action = "SignUpServlet">
+		<table align="center">
+			<tr>
+				<td>Username</td>
+				<td><input type="text" name="username" required></td>
+			</tr>
+
+			<tr>
+				<td>Gender</td>
+				<td><input type="radio" name="gender" value="male" checked>Male
+					<input type="radio" name="gender" value="female" checked>Female
+					<input type="radio" name="gender" value="other" checked>Others</td>
+			</tr>
+			<tr>
+				<td>Age</td>
+				<td><input type="number" name="age" required size=2 min="18" max="80" ></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="email" name="email" required placeholder="Enter valid email Id"></td>
+			</tr>
+			<tr>
+				<td>password</td>
+				<td><input type="password" name="password" required></td>
+			</tr>
+			<tr>
+				<td>Phone Number</td>
+				<td><input type="tel" name="phoneNumber" required pattern="[6-9]{1}[0-9]{9}" placeholder="Enter valid no" ></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<button type="submit">SignUp</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+
+</body>
+</html>
