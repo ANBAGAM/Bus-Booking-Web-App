@@ -12,6 +12,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+import com.chainsys.dao.UserDAO;
+import com.chainsys.model.User;
+
 /**
  * Servlet implementation class LoginServlet
  */

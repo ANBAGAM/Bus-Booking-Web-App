@@ -1,10 +1,13 @@
-package com.chainsys.controller;
+package com.chainsys.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+
+import com.chainsys.model.Seat;
+import com.chainsys.util.ConnectionUtil;
 
 public class SeatDAO {
 	public ArrayList<Seat> getStatus(int id) throws SQLException {

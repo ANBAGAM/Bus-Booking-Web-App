@@ -1,9 +1,12 @@
-package com.chainsys.controller;
+package com.chainsys.dao;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+
+import com.chainsys.model.User;
+import com.chainsys.util.ConnectionUtil;
 
 public class UserDAO {
 

@@ -1,4 +1,4 @@
-package com.chainsys.controller;
+package com.chainsys.model;
 
 public class Bus {
 	private String id;
