@@ -57,12 +57,10 @@ public class BookSeat extends HttpServlet {
 		String temp = " ";
 		request.setAttribute("email", email);
 		request.setAttribute("bus_id", busid);
-		
-		
-		
+
 		SeatDAO obj = new SeatDAO();
-		String seatNo="  ";
-		int count=0;
+		String seatNo = "  ";
+		int count = 0;
 		for (int i = 1; i <= 20; i++) {
 			temp = String.valueOf(i);
 			status = request.getParameter(temp);
@@ -70,25 +68,25 @@ public class BookSeat extends HttpServlet {
 			if (status.equals("yes")) {
 				// out.println("Yes-->"+temp);
 				try {
-					
+
 					obj.updateSeat(busid, temp);
 
 					obj.addTicket(email, busid, temp);
 					count++;
-					seatNo=seatNo+temp+" ";
+					seatNo = seatNo + temp + " ";
 
 				} catch (SQLException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
-				
-			}
-			
 
-		}int price=0;
+			}
+
+		}
+		int price = 0;
 		BusDAO busDAO = new BusDAO();
 		try {
-		 price=busDAO.getPrice(busid) * count;
+			price = busDAO.getPrice(busid) * count;
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();

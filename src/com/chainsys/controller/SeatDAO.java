@@ -54,18 +54,17 @@ public class SeatDAO {
 	public void addTicket(String email, int busid, String seatid)
 			throws SQLException {
 
-		System.out.println(email+" "+ busid+" "+seatid);
+		System.out.println(email + " " + busid + " " + seatid);
 		Connection connection = ConnectionUtil.getConnection();
 		System.out.println(connection);
 		String sql = "insert into ticketdetails(bus_id,seat_no,email_id) values(?,?,?)";
-		PreparedStatement preparedStatement = connection
-				.prepareStatement(sql);
+		PreparedStatement preparedStatement = connection.prepareStatement(sql);
 		preparedStatement.setInt(1, busid);
 		preparedStatement.setString(2, seatid);
-		preparedStatement.setString(3,email);
-		
+		preparedStatement.setString(3, email);
 
 		int rows = preparedStatement.executeUpdate();
-		System.out.println("Rows inserted: " + rows);	}
+		System.out.println("Rows inserted: " + rows);
+	}
 
 }
